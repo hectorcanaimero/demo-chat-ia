@@ -1,0 +1,15 @@
+{
+  "name": "agente-produtos",
+  "version": "1.0.0",
+  "description": "````   (function() {     var script = document.createElement('script');     script.src = 'https://condor.chats.digital/condor-chat.js';     script.async = true;     document.head.appendChild(script);   })();   ```",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

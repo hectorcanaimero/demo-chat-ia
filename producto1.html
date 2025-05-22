@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REFRIG.PANASONIC BB64 460L INOX 220V- Mi Tienda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Mi Tienda</a>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://6gpgv15qo7spvwl6littydn.blob.core.windows.net/hybris/master/condor/images/515Wx515H/2218477_1.jpg" class="img-fluid rounded" alt="REFRIG.PANASONIC BB64 460L INOX 220V">
+      </div>
+      <div class="col-md-6">
+        <h1>REFRIG.PANASONIC BB64 460L INOX 220V
+        </h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae.</p>
+        <h3 class="text-success mb-3">R$ 5.000</h3>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    &copy; 2024 Mi Tienda. Todos los derechos reservados.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <script type="module">
+    function n() {
+      const n = window.location.pathname;
+      return /\/product\/\d+(?:\/[\w-]+)?/.test(n)
+    }
+    function t() {
+      const n = window.location.pathname.match(/\/product\/(\d+)/);
+      return n ? n[1] : null
+    }
+    const nameProduct = function () {
+      const n = window.location.pathname.split("/");
+      let t = -1;
+      for (let e = 0; e < n.length; e++)
+        if ("product" === n[e]) {
+          t = e;
+          break
+        } if (t >= 0 && n.length > t + 2) {
+        const e = n[t + 2];
+        return decodeURIComponent(e.replace(/-/g, " "))
+      }
+      return ""
+    }();
+    console.log('T', t());
+    console.log('N', nameProduct);
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    createChat({
+      webhookUrl: 'https://hook.z0n.co/webhook/1c1742f4-57fa-46d5-999e-2177d2e60eab/chat',
+      target: '#n8n-chat',
+      mode: 'window',
+      chatInputKey: 'chatInput',
+      chatSessionKey: 'sessionId',
+      metadata: {
+        file_id: t(),
+        name: nameProduct,
+      },
+      showWelcomeScreen: false,
+      defaultLanguage: 'pt',
+      initialMessages: [
+        'Olá! 👋',
+        'Vamos falar um pouco sobre o produto ' + nameProduct + '?'
+      ],
+      i18n: {
+        pt: {
+          title: 'IA Condor!',
+          subtitle: "Especialista em produtos Condor",
+          footer: '© Condor 2025', // Personalizar o texto do footer
+          getStarted: 'Nova Conversa',
+          inputPlaceholder: 'Digite sua pergunta...',
+          sendMessage: 'Enviar',
+          errorMessage: 'Ocorreu um erro. Por favor, tente novamente mais tarde.',
+          closeChat: 'Fechar chat',
+          openChat: 'Abrir chat'
+        },
+      },
+    });
+    setTimeout(() => {
+      const footerElement = document.querySelector('.n8n-chat__footer');
+      if (footerElement) {
+        footerElement.innerHTML = '<span>© Condor 2025</span>';
+      }
+      const poweredByElement = document.querySelector('.chat-powered-by');
+      if (poweredByElement) {
+        poweredByElement.style.display = 'none';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
