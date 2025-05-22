@@ -17,6 +17,6 @@ app.get('/product/2215069/TV-AIWA-43SMART-FULL-HD-AWS-TV-43-BL-02', (req, res) =
   return res.sendFile(__dirname + '/producto3.html');
 });
 
-app.listen(3000, () => {
-    console.log('Servidor escuchando en el puerto 3000');
+app.listen(18700, () => {
+    console.log('Servidor escuchando en el puerto 18700');
 });
